@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Encuesta de hábitos energéticos</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<header class="container py-4">
+  <h1>Encuesta de hábitos energéticos</h1>
+  <p class="lead">Proyecto académico sobre consumo responsable de energía.</p>
+</header>
+<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Ahorra Energía</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Mostrar navegación">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav me-auto"><li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li><li class="nav-item"><a class="nav-link" href="equipos.html">Mis equipos</a></li><li class="nav-item"><a class="nav-link" href="registro.html">Registro</a></li><li class="nav-item"><a class="nav-link" href="mi-factura.html">Mi factura</a></li><li class="nav-item"><a class="nav-link active" href="encuesta.html" aria-current="page">Encuesta</a></li></ul>
+    </div>
+  </div>
+</nav>
+<main class="container py-4">
+<div class="alert alert-success" role="alert">La encuesta permite reconocer hábitos familiares y pensar en oportunidades de ahorro. No escribas datos personales sensibles.</div>
+<form action="encuesta.html" method="get">
+<fieldset class="border rounded p-3 mb-4"><legend class="float-none w-auto px-2">Datos generales</legend>
+<div class="mb-3"><label for="nombre" class="form-label">Nombre o apodo</label><input type="text" class="form-control" id="nombre" name="nombre" required></div>
+<div class="mb-3"><label for="correo" class="form-label">Correo electrónico</label><input type="email" class="form-control" id="correo" name="correo" required></div>
+<div class="mb-3"><label for="personas" class="form-label">Personas que viven en el hogar</label><input type="number" class="form-control" id="personas" name="personas" min="1" max="20" required></div>
+</fieldset>
+<fieldset class="border rounded p-3 mb-4"><legend class="float-none w-auto px-2">Hábitos de consumo</legend>
+<div class="mb-3"><label for="horas" class="form-label">Horas al día que se usan equipos eléctricos</label><input type="range" class="form-range" id="horas" name="horas" min="0" max="24" value="4"><div class="d-flex justify-content-between"><span>0 horas</span><span>24 horas</span></div></div>
+<div class="mb-3"><label for="equipo" class="form-label">Equipo que más se utiliza</label><select class="form-select" id="equipo" name="equipo" required><option value="">Selecciona</option><option value="nevera">Nevera</option><option value="lavadora">Lavadora</option><option value="sanduchera">Sanduchera</option><option value="waflera">Waflera</option><option value="otro">Otro</option></select></div>
+<fieldset class="mb-3"><legend class="fs-6">¿Desconectas los equipos cuando no los utilizas?</legend>
+<div class="form-check"><input class="form-check-input" type="radio" id="desconecta-si" name="desconecta" value="si" required><label class="form-check-label" for="desconecta-si">Sí</label></div>
+<div class="form-check"><input class="form-check-input" type="radio" id="desconecta-no" name="desconecta" value="no"><label class="form-check-label" for="desconecta-no">No</label></div></fieldset>
+<fieldset class="mb-3"><legend class="fs-6">¿Qué prácticas realizas para ahorrar energía?</legend>
+<div class="form-check"><input class="form-check-input" type="checkbox" id="luces" name="acciones" value="apagar-luces"><label class="form-check-label" for="luces">Apagar luces que no se necesitan</label></div>
+<div class="form-check"><input class="form-check-input" type="checkbox" id="desenchufar" name="acciones" value="desconectar-equipos"><label class="form-check-label" for="desenchufar">Desconectar equipos sin uso</label></div>
+<div class="form-check"><input class="form-check-input" type="checkbox" id="carga" name="acciones" value="carga-completa"><label class="form-check-label" for="carga">Usar la lavadora con carga completa</label></div></fieldset>
+<div class="mb-3"><label for="ideas" class="form-label">¿Qué otra acción de ahorro propones?</label><textarea class="form-control" id="ideas" name="ideas" rows="4"></textarea></div>
+</fieldset>
+<button type="submit" class="btn btn-success">Enviar encuesta</button>
+<button type="reset" class="btn btn-secondary">Limpiar</button>
+</form>
+</main>
+<footer class="container border-top py-3 mt-4">
+  <p class="mb-0">Ahorra Energía · Evidencia individual de HTML5 y Bootstrap.</p>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
